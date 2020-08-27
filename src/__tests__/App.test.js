@@ -11,5 +11,11 @@ describe('User can view error codes', () => {
 
     expect(wrapper.find(ErrorCodes)).toHaveLength(1)
   })
+
+  it('user does not click error codes button, component does not show', () => {
+    const wrapper = shallow(<App />)
+
+    expect(wrapper.find(ErrorCodes)).toHaveLength(0)
+  })
 })
 
