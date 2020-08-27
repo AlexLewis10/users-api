@@ -1,6 +1,6 @@
-import React, { useState }from 'react';
-import { RedocStandalone } from 'redoc'
+import React, { useState }from 'react'
 import ErrorCodes from './ErrorCodes'
+import Requests from './Requests'
 
 function App() {
   const [showErrorCodes, setShowErrorCodes] = useState(false)
@@ -17,11 +17,7 @@ function App() {
     <div>
       <button>Requests</button>
       <button id='error-codes' onClick={handleShowErrorCodes}>Error Codes</button>
-      <RedocStandalone specUrl="https://raw.githubusercontent.com/AlexLewis10/users-api/master/swagger.json"
-        options={{
-        theme: { colors: { primary: { main: '#1E0D2D' } } }
-        }}
-      />
+      { !showErrorCodes ? <Requests /> : null }
       { showErrorCodes ? <ErrorCodes /> : null }
     </div>
   );
