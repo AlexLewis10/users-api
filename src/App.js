@@ -6,17 +6,19 @@ function App() {
   const [showErrorCodes, setShowErrorCodes] = useState(false)
 
   const handleShowErrorCodes = () => {
-    if (showErrorCodes) {
-      setShowErrorCodes(false)
-    } else {
-      setShowErrorCodes(true)
-    }
+    showErrorCodes ? setShowErrorCodes(false) : setShowErrorCodes(true)
   }
 
   return (
     <div>
-      <button id='requests' onClick={handleShowErrorCodes}>Requests</button>
-      <button id='error-codes' onClick={handleShowErrorCodes}>Error Codes</button>
+      <button 
+        id='requests' 
+        onClick={handleShowErrorCodes}
+        >Requests</button>
+      <button 
+        id='error-codes' 
+        onClick={handleShowErrorCodes}
+        >Error Codes</button>
       { showErrorCodes ? <ErrorCodes /> : <Requests />}
     </div>
   );
