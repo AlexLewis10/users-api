@@ -1,8 +1,8 @@
 import React from 'react'
-import App from '../App.js'
+import App from '../components/App.js'
 import { shallow } from 'enzyme'
-import ErrorCodes from '../ErrorCodes'
-import Requests from '../Requests'
+import ErrorCodes from '../components/ErrorCodes'
+import Requests from '../components/Requests'
 
 describe('User can view error codes', () => {
   it('clicking error codes button shows the ErrorCode component', () => {
