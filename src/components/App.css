@@ -1,0 +1,22 @@
+.btn-container {
+  background-color: #263238;
+  height: 5vh;
+}
+
+button {
+  background-color: white;
+  height: 100%;
+  width: 130px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  margin: 0;
+  color: #1E0D2D;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color: #320B42;
+  color: white;
+
+}

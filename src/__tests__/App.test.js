@@ -3,6 +3,7 @@ import App from '../components/App.js'
 import { shallow } from 'enzyme'
 import ErrorCodes from '../components/ErrorCodes'
 import Requests from '../components/Requests'
+import './App.css'
 
 describe('User can view error codes', () => {
   it('clicking error codes button shows the ErrorCode component', () => {
