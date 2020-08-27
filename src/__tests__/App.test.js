@@ -1,13 +1,13 @@
 import React from 'react'
 import App from '../App.js'
 import { shallow } from 'enzyme'
+import ErrorCodes from '../ErrorCodes'
 
-describe('App', () => {
-  it("renders without crashing", () => {
-    const wrapper = shallow( <App /> );
-  
-    expect(wrapper.find(App)).toHaveLength(1)
-  });
+
+describe('User can view error codes', () => {
+  it('clicking error codes button shows the ErrorCode component', () => {
+    const wrapper = shallow(<App />)
+
+    expect(wrapper.find(ErrorCodes)).toHaveLength(0)
+  })
 })
-
-
