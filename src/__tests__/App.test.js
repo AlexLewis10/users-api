@@ -27,14 +27,15 @@ describe('User can view error codes', () => {
     expect(wrapper.find(Requests)).toHaveLength(0)
   })
 
-  xit('can return to requests by clicking the requests button', () => {
+  it('can return to requests by clicking the requests button', () => {
     const wrapper = shallow(<App />)
     const errorCodesButton = wrapper.find('#error-codes')
-    const requestsButton = wrapper.find('#requests')
     errorCodesButton.simulate('click')
+    const requestsButton = wrapper.find('#requests')
     requestsButton.simulate('click')
 
-    expect(wrapper).toIncludeText('Users API')
+    expect(wrapper.find(Requests)).toHaveLength(1)
+    expect(wrapper.find(ErrorCodes)).toHaveLength(0)
   })
 })
 
