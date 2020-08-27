@@ -17,8 +17,7 @@ function App() {
     <div>
       <button>Requests</button>
       <button id='error-codes' onClick={handleShowErrorCodes}>Error Codes</button>
-      { !showErrorCodes ? <Requests /> : null }
-      { showErrorCodes ? <ErrorCodes /> : null }
+      { !showErrorCodes ? <Requests /> : <ErrorCodes /> }
     </div>
   );
 }
