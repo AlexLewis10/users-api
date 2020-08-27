@@ -17,7 +17,7 @@ const ErrorCodes = () => {
           </tr>
           <tr>
             <th>402</th>
-            <td>The parameters were valid but the request failed</td>
+            <td>The parameters were valid but the request failed.</td>
           </tr>
           <tr>
             <th>403</th>
@@ -40,19 +40,19 @@ const ErrorCodes = () => {
           </tr>
           <tr>
             <th>500</th>
-            <td>Server Errors - Something went wrong on our end</td>
+            <td>Server Errors - Something went wrong on our end.</td>
           </tr>
         </tbody>
       </table>
 
       <h3>Common Errors</h3>
       <h4>account_already_exists</h4>
-      <p>The email address provided is already taken</p>
+      <p>The email address provided is already taken.</p>
       <h4>id_does_not_exist</h4>
-      <p>The id was not found in the database</p>
+      <p>The id was not found in the database.</p>
       <h4>invalid_input</h4>
       <p>Either the id, email address or name
-          has not been entered correctly</p>
+          has not been entered correctly.</p>
     </div>
   )
 }
