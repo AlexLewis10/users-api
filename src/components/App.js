@@ -5,24 +5,32 @@ import './App.css'
 
 function App() {
   const [showErrorCodes, setShowErrorCodes] = useState(false)
+  const [showRequests, setShowRequests] = useState(true)
 
   const handleShowErrorCodes = () => {
-    showErrorCodes ? setShowErrorCodes(false) : setShowErrorCodes(true)
+    setShowErrorCodes(true)
+    setShowRequests(false)
+  }
+  
+  const handleShowRequests = () => {
+    setShowRequests(true)
+    setShowErrorCodes(false)
   }
 
   return (
     <div>
-      <div className='btn-container'>
+      <div id='btn-container'>
       <button 
         id='requests' 
-        onClick={handleShowErrorCodes}
+        onClick={handleShowRequests}
         >Requests</button>
       <button 
         id='error-codes' 
         onClick={handleShowErrorCodes}
         >Error Codes</button>
       </div>
-      { showErrorCodes ? <ErrorCodes /> : <Requests />}
+      { showRequests ? <Requests /> : null }
+      { showErrorCodes ? <ErrorCodes /> : null}
     </div>
   );
 }

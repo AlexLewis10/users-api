@@ -5,8 +5,10 @@ const Requests = () => {
   return (
     <RedocStandalone specUrl="https://raw.githubusercontent.com/AlexLewis10/users-api/master/swagger.json"
       options={{
-      theme: { colors: { primary: { main: '#1E0D2D' } } }
-    }}
+        theme: { 
+          colors: { primary: { main: '#320B42' }} 
+        },
+      }}
     />
   )
 }

@@ -3,7 +3,6 @@ import App from '../components/App.js'
 import { shallow } from 'enzyme'
 import ErrorCodes from '../components/ErrorCodes'
 import Requests from '../components/Requests'
-import './App.css'
 
 describe('User can view error codes', () => {
   it('clicking error codes button shows the ErrorCode component', () => {
@@ -37,6 +36,17 @@ describe('User can view error codes', () => {
 
     expect(wrapper.find(Requests)).toHaveLength(1)
     expect(wrapper.find(ErrorCodes)).toHaveLength(0)
+  })
+
+  it('clicking error codes button twice does not show requests component', () => {
+    const wrapper = shallow(<App />)
+    let button = wrapper.find('#error-codes')
+    button.simulate('click')
+    button = wrapper.find('#error-codes')
+    button.simulate('click')
+
+    expect(wrapper.find(Requests)).toHaveLength(0)
+    expect(wrapper.find(ErrorCodes)).toHaveLength(1)
   })
 })
 
