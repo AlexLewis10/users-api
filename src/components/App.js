@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 import ErrorCodes from './ErrorCodes'
 import Requests from './Requests'
-import './App.css'
+import '../styles/App.css'
 
 function App() {
   const [showErrorCodes, setShowErrorCodes] = useState(false)

@@ -1,5 +1,5 @@
 import React from 'react'
-import './ErrorCodes.css'
+import '../styles/ErrorCodes.css'
 
 const ErrorCodes = () => {
   

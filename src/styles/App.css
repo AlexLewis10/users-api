@@ -12,11 +12,13 @@ button {
   outline: none;
   margin: 0;
   color: #1E0D2D;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  text-size-adjust: 100%;
   transition-duration: 0.2s;
 }
 
 button:hover {
   background-color: #320B42;
   color: white;
-
 }
